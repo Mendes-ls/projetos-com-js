@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador</title>
+    <style>
+        *{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20pt;
+        }
+        body{
+            background-color: rgba(4, 128, 128, 0.548);
+        }
+        h1{
+            text-align: center;
+            font-size: 40pt;
+        }
+        #etxt{
+            font-family: 'Courier New', Courier, monospace;
+                font-size: 20pt;
+                border-radius: 90px;
+        }
+    #btn{
+       padding: 10px 250px;
+       border-radius: 90px;
+    }
+    #btn:hover{
+        background-color: rgb(28, 97, 224) ;
+        transition: 1s ;
+    }
+
+          
+    </style>
+</head>
+<body>
+    <h1>Tu es gringo ?🤨</h1>
+   
+        <p id="txt">Qual seu pais ? <input type="text" name="etxt" id="etxt"></p>
+        <input type="button" value="Verificar" onclick="verificar()" on="arrastar()" id="btn">
+        <div id="res"><br>Resultado</div>
+    
+</body>
+<script>
+   
+
+function verificar(){
+    var  etnia =document.getElementById('etxt')
+    var res = document.getElementById('res')
+    var et =String(etnia.value)
+  res.innerHTML=`Você disse <strong>${et}</strong> <br>`
+  if( et != 'Brasil'){
+    res.innerHTML += 'Tu és Gringo!'
+  }else{
+    res.innerHTML += 'Tu és Brazuca !'
+  
+  }
+  
+
+
+}
+</script>
+</html>
